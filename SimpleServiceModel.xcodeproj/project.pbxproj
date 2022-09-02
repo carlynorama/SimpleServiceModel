@@ -14,6 +14,10 @@
 		DAD6A7AF28C2C0EA00736A32 /* SimpleServiceModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD6A7AE28C2C0EA00736A32 /* SimpleServiceModelTests.swift */; };
 		DAD6A7B928C2C0EB00736A32 /* SimpleServiceModelUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD6A7B828C2C0EB00736A32 /* SimpleServiceModelUITests.swift */; };
 		DAD6A7BB28C2C0EB00736A32 /* SimpleServiceModelUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD6A7BA28C2C0EB00736A32 /* SimpleServiceModelUITestsLaunchTests.swift */; };
+		DAD6A7CB28C2C10600736A32 /* ViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD6A7C728C2C10600736A32 /* ViewModelFactory.swift */; };
+		DAD6A7CC28C2C10600736A32 /* Examples.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD6A7C828C2C10600736A32 /* Examples.swift */; };
+		DAD6A7CD28C2C10600736A32 /* MockLocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD6A7C928C2C10600736A32 /* MockLocationService.swift */; };
+		DAD6A7CE28C2C10600736A32 /* Array + Stream.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD6A7CA28C2C10600736A32 /* Array + Stream.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +49,10 @@
 		DAD6A7B428C2C0EB00736A32 /* SimpleServiceModelUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleServiceModelUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAD6A7B828C2C0EB00736A32 /* SimpleServiceModelUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleServiceModelUITests.swift; sourceTree = "<group>"; };
 		DAD6A7BA28C2C0EB00736A32 /* SimpleServiceModelUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleServiceModelUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		DAD6A7C728C2C10600736A32 /* ViewModelFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModelFactory.swift; sourceTree = "<group>"; };
+		DAD6A7C828C2C10600736A32 /* Examples.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Examples.swift; sourceTree = "<group>"; };
+		DAD6A7C928C2C10600736A32 /* MockLocationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockLocationService.swift; sourceTree = "<group>"; };
+		DAD6A7CA28C2C10600736A32 /* Array + Stream.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array + Stream.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +105,10 @@
 			children = (
 				DAD6A79C28C2C0E800736A32 /* SimpleServiceModelApp.swift */,
 				DAD6A79E28C2C0E800736A32 /* ContentView.swift */,
+				DAD6A7CA28C2C10600736A32 /* Array + Stream.swift */,
+				DAD6A7C828C2C10600736A32 /* Examples.swift */,
+				DAD6A7C928C2C10600736A32 /* MockLocationService.swift */,
+				DAD6A7C728C2C10600736A32 /* ViewModelFactory.swift */,
 				DAD6A7A028C2C0EA00736A32 /* Assets.xcassets */,
 				DAD6A7A228C2C0EA00736A32 /* SimpleServiceModel.entitlements */,
 				DAD6A7A328C2C0EA00736A32 /* Preview Content */,
@@ -259,8 +271,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAD6A7CC28C2C10600736A32 /* Examples.swift in Sources */,
+				DAD6A7CD28C2C10600736A32 /* MockLocationService.swift in Sources */,
+				DAD6A7CB28C2C10600736A32 /* ViewModelFactory.swift in Sources */,
 				DAD6A79F28C2C0E800736A32 /* ContentView.swift in Sources */,
 				DAD6A79D28C2C0E800736A32 /* SimpleServiceModelApp.swift in Sources */,
+				DAD6A7CE28C2C10600736A32 /* Array + Stream.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
