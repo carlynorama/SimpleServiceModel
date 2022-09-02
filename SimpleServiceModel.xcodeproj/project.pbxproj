@@ -1,0 +1,609 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DAD6A79D28C2C0E800736A32 /* SimpleServiceModelApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD6A79C28C2C0E800736A32 /* SimpleServiceModelApp.swift */; };
+		DAD6A79F28C2C0E800736A32 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD6A79E28C2C0E800736A32 /* ContentView.swift */; };
+		DAD6A7A128C2C0EA00736A32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAD6A7A028C2C0EA00736A32 /* Assets.xcassets */; };
+		DAD6A7A528C2C0EA00736A32 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAD6A7A428C2C0EA00736A32 /* Preview Assets.xcassets */; };
+		DAD6A7AF28C2C0EA00736A32 /* SimpleServiceModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD6A7AE28C2C0EA00736A32 /* SimpleServiceModelTests.swift */; };
+		DAD6A7B928C2C0EB00736A32 /* SimpleServiceModelUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD6A7B828C2C0EB00736A32 /* SimpleServiceModelUITests.swift */; };
+		DAD6A7BB28C2C0EB00736A32 /* SimpleServiceModelUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD6A7BA28C2C0EB00736A32 /* SimpleServiceModelUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DAD6A7AB28C2C0EA00736A32 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DAD6A79128C2C0E800736A32 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DAD6A79828C2C0E800736A32;
+			remoteInfo = SimpleServiceModel;
+		};
+		DAD6A7B528C2C0EB00736A32 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DAD6A79128C2C0E800736A32 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DAD6A79828C2C0E800736A32;
+			remoteInfo = SimpleServiceModel;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DAD6A79928C2C0E800736A32 /* SimpleServiceModel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleServiceModel.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAD6A79C28C2C0E800736A32 /* SimpleServiceModelApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleServiceModelApp.swift; sourceTree = "<group>"; };
+		DAD6A79E28C2C0E800736A32 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		DAD6A7A028C2C0EA00736A32 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DAD6A7A228C2C0EA00736A32 /* SimpleServiceModel.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SimpleServiceModel.entitlements; sourceTree = "<group>"; };
+		DAD6A7A428C2C0EA00736A32 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DAD6A7AA28C2C0EA00736A32 /* SimpleServiceModelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleServiceModelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAD6A7AE28C2C0EA00736A32 /* SimpleServiceModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleServiceModelTests.swift; sourceTree = "<group>"; };
+		DAD6A7B428C2C0EB00736A32 /* SimpleServiceModelUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleServiceModelUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAD6A7B828C2C0EB00736A32 /* SimpleServiceModelUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleServiceModelUITests.swift; sourceTree = "<group>"; };
+		DAD6A7BA28C2C0EB00736A32 /* SimpleServiceModelUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleServiceModelUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DAD6A79628C2C0E800736A32 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAD6A7A728C2C0EA00736A32 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAD6A7B128C2C0EB00736A32 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DAD6A79028C2C0E800736A32 = {
+			isa = PBXGroup;
+			children = (
+				DAD6A79B28C2C0E800736A32 /* SimpleServiceModel */,
+				DAD6A7AD28C2C0EA00736A32 /* SimpleServiceModelTests */,
+				DAD6A7B728C2C0EB00736A32 /* SimpleServiceModelUITests */,
+				DAD6A79A28C2C0E800736A32 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DAD6A79A28C2C0E800736A32 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DAD6A79928C2C0E800736A32 /* SimpleServiceModel.app */,
+				DAD6A7AA28C2C0EA00736A32 /* SimpleServiceModelTests.xctest */,
+				DAD6A7B428C2C0EB00736A32 /* SimpleServiceModelUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DAD6A79B28C2C0E800736A32 /* SimpleServiceModel */ = {
+			isa = PBXGroup;
+			children = (
+				DAD6A79C28C2C0E800736A32 /* SimpleServiceModelApp.swift */,
+				DAD6A79E28C2C0E800736A32 /* ContentView.swift */,
+				DAD6A7A028C2C0EA00736A32 /* Assets.xcassets */,
+				DAD6A7A228C2C0EA00736A32 /* SimpleServiceModel.entitlements */,
+				DAD6A7A328C2C0EA00736A32 /* Preview Content */,
+			);
+			path = SimpleServiceModel;
+			sourceTree = "<group>";
+		};
+		DAD6A7A328C2C0EA00736A32 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				DAD6A7A428C2C0EA00736A32 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		DAD6A7AD28C2C0EA00736A32 /* SimpleServiceModelTests */ = {
+			isa = PBXGroup;
+			children = (
+				DAD6A7AE28C2C0EA00736A32 /* SimpleServiceModelTests.swift */,
+			);
+			path = SimpleServiceModelTests;
+			sourceTree = "<group>";
+		};
+		DAD6A7B728C2C0EB00736A32 /* SimpleServiceModelUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DAD6A7B828C2C0EB00736A32 /* SimpleServiceModelUITests.swift */,
+				DAD6A7BA28C2C0EB00736A32 /* SimpleServiceModelUITestsLaunchTests.swift */,
+			);
+			path = SimpleServiceModelUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DAD6A79828C2C0E800736A32 /* SimpleServiceModel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DAD6A7BE28C2C0EB00736A32 /* Build configuration list for PBXNativeTarget "SimpleServiceModel" */;
+			buildPhases = (
+				DAD6A79528C2C0E800736A32 /* Sources */,
+				DAD6A79628C2C0E800736A32 /* Frameworks */,
+				DAD6A79728C2C0E800736A32 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SimpleServiceModel;
+			productName = SimpleServiceModel;
+			productReference = DAD6A79928C2C0E800736A32 /* SimpleServiceModel.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DAD6A7A928C2C0EA00736A32 /* SimpleServiceModelTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DAD6A7C128C2C0EB00736A32 /* Build configuration list for PBXNativeTarget "SimpleServiceModelTests" */;
+			buildPhases = (
+				DAD6A7A628C2C0EA00736A32 /* Sources */,
+				DAD6A7A728C2C0EA00736A32 /* Frameworks */,
+				DAD6A7A828C2C0EA00736A32 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DAD6A7AC28C2C0EA00736A32 /* PBXTargetDependency */,
+			);
+			name = SimpleServiceModelTests;
+			productName = SimpleServiceModelTests;
+			productReference = DAD6A7AA28C2C0EA00736A32 /* SimpleServiceModelTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DAD6A7B328C2C0EB00736A32 /* SimpleServiceModelUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DAD6A7C428C2C0EB00736A32 /* Build configuration list for PBXNativeTarget "SimpleServiceModelUITests" */;
+			buildPhases = (
+				DAD6A7B028C2C0EB00736A32 /* Sources */,
+				DAD6A7B128C2C0EB00736A32 /* Frameworks */,
+				DAD6A7B228C2C0EB00736A32 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DAD6A7B628C2C0EB00736A32 /* PBXTargetDependency */,
+			);
+			name = SimpleServiceModelUITests;
+			productName = SimpleServiceModelUITests;
+			productReference = DAD6A7B428C2C0EB00736A32 /* SimpleServiceModelUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DAD6A79128C2C0E800736A32 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					DAD6A79828C2C0E800736A32 = {
+						CreatedOnToolsVersion = 14.0;
+					};
+					DAD6A7A928C2C0EA00736A32 = {
+						CreatedOnToolsVersion = 14.0;
+						TestTargetID = DAD6A79828C2C0E800736A32;
+					};
+					DAD6A7B328C2C0EB00736A32 = {
+						CreatedOnToolsVersion = 14.0;
+						TestTargetID = DAD6A79828C2C0E800736A32;
+					};
+				};
+			};
+			buildConfigurationList = DAD6A79428C2C0E800736A32 /* Build configuration list for PBXProject "SimpleServiceModel" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DAD6A79028C2C0E800736A32;
+			productRefGroup = DAD6A79A28C2C0E800736A32 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DAD6A79828C2C0E800736A32 /* SimpleServiceModel */,
+				DAD6A7A928C2C0EA00736A32 /* SimpleServiceModelTests */,
+				DAD6A7B328C2C0EB00736A32 /* SimpleServiceModelUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DAD6A79728C2C0E800736A32 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAD6A7A528C2C0EA00736A32 /* Preview Assets.xcassets in Resources */,
+				DAD6A7A128C2C0EA00736A32 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAD6A7A828C2C0EA00736A32 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAD6A7B228C2C0EB00736A32 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DAD6A79528C2C0E800736A32 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAD6A79F28C2C0E800736A32 /* ContentView.swift in Sources */,
+				DAD6A79D28C2C0E800736A32 /* SimpleServiceModelApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAD6A7A628C2C0EA00736A32 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAD6A7AF28C2C0EA00736A32 /* SimpleServiceModelTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAD6A7B028C2C0EB00736A32 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAD6A7BB28C2C0EB00736A32 /* SimpleServiceModelUITestsLaunchTests.swift in Sources */,
+				DAD6A7B928C2C0EB00736A32 /* SimpleServiceModelUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DAD6A7AC28C2C0EA00736A32 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DAD6A79828C2C0E800736A32 /* SimpleServiceModel */;
+			targetProxy = DAD6A7AB28C2C0EA00736A32 /* PBXContainerItemProxy */;
+		};
+		DAD6A7B628C2C0EB00736A32 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DAD6A79828C2C0E800736A32 /* SimpleServiceModel */;
+			targetProxy = DAD6A7B528C2C0EB00736A32 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		DAD6A7BC28C2C0EB00736A32 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DAD6A7BD28C2C0EB00736A32 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		DAD6A7BF28C2C0EB00736A32 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SimpleServiceModel/SimpleServiceModel.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SimpleServiceModel/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 12.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.carlynorama.SimpleServiceModel;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DAD6A7C028C2C0EB00736A32 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SimpleServiceModel/SimpleServiceModel.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SimpleServiceModel/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 12.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.carlynorama.SimpleServiceModel;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		DAD6A7C228C2C0EB00736A32 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.carlynorama.SimpleServiceModelTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SimpleServiceModel.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SimpleServiceModel";
+			};
+			name = Debug;
+		};
+		DAD6A7C328C2C0EB00736A32 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.carlynorama.SimpleServiceModelTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SimpleServiceModel.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SimpleServiceModel";
+			};
+			name = Release;
+		};
+		DAD6A7C528C2C0EB00736A32 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.carlynorama.SimpleServiceModelUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SimpleServiceModel;
+			};
+			name = Debug;
+		};
+		DAD6A7C628C2C0EB00736A32 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.carlynorama.SimpleServiceModelUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SimpleServiceModel;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DAD6A79428C2C0E800736A32 /* Build configuration list for PBXProject "SimpleServiceModel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAD6A7BC28C2C0EB00736A32 /* Debug */,
+				DAD6A7BD28C2C0EB00736A32 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DAD6A7BE28C2C0EB00736A32 /* Build configuration list for PBXNativeTarget "SimpleServiceModel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAD6A7BF28C2C0EB00736A32 /* Debug */,
+				DAD6A7C028C2C0EB00736A32 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DAD6A7C128C2C0EB00736A32 /* Build configuration list for PBXNativeTarget "SimpleServiceModelTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAD6A7C228C2C0EB00736A32 /* Debug */,
+				DAD6A7C328C2C0EB00736A32 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DAD6A7C428C2C0EB00736A32 /* Build configuration list for PBXNativeTarget "SimpleServiceModelUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAD6A7C528C2C0EB00736A32 /* Debug */,
+				DAD6A7C628C2C0EB00736A32 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DAD6A79128C2C0E800736A32 /* Project object */;
+}
