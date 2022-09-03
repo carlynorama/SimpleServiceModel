@@ -27,8 +27,8 @@ protocol LocationBroadcaster {
     var currentLocation:CLLocation { get }
 }
 
-protocol LocationUpdater {
-    mutating func update(with location:CLLocation)
+protocol LocationUpdater:AnyObject {
+    func update(with location:CLLocation)
 }
 
 protocol LocationService:LocationBroadcaster & LocationUpdater {

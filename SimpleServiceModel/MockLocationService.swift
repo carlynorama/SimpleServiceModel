@@ -10,7 +10,7 @@ import CoreLocation
 
 
 
-struct MockLocationService:LocationService {
+class MockLocationService:LocationService {
 
     
 //    func update() {
@@ -38,7 +38,7 @@ struct MockLocationService:LocationService {
         }
     }
     
-    mutating func update(with location:CLLocation) {
+    func update(with location:CLLocation) {
         currentLocation = location
     }
 }
