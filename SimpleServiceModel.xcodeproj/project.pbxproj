@@ -20,7 +20,10 @@
 		DAD6A7CE28C2C10600736A32 /* Array + Stream.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD6A7CA28C2C10600736A32 /* Array + Stream.swift */; };
 		DAD6A7D028C2CCF400736A32 /* CLLocation + Pretty.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD6A7CF28C2CCF300736A32 /* CLLocation + Pretty.swift */; };
 		DAD6A7D428C2CE3F00736A32 /* MockWeatherServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD6A7D328C2CE3F00736A32 /* MockWeatherServices.swift */; };
-		DAD6A7D628C2D4CC00736A32 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD6A7D528C2D4CC00736A32 /* ViewModel.swift */; };
+		DAD6A7D628C2D4CC00736A32 /* WeatherDisplayVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD6A7D528C2D4CC00736A32 /* WeatherDisplayVM.swift */; };
+		DAD6A7D828C397B900736A32 /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD6A7D728C397B900736A32 /* LocationView.swift */; };
+		DAD6A7DA28C398C500736A32 /* LocationViewVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD6A7D928C398C500736A32 /* LocationViewVM.swift */; };
+		DAD6A7DC28C39BC300736A32 /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD6A7DB28C39BC300736A32 /* WeatherView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,7 +62,10 @@
 		DAD6A7CF28C2CCF300736A32 /* CLLocation + Pretty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocation + Pretty.swift"; sourceTree = "<group>"; };
 		DAD6A7D228C2CD3E00736A32 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		DAD6A7D328C2CE3F00736A32 /* MockWeatherServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockWeatherServices.swift; sourceTree = "<group>"; };
-		DAD6A7D528C2D4CC00736A32 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		DAD6A7D528C2D4CC00736A32 /* WeatherDisplayVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDisplayVM.swift; sourceTree = "<group>"; };
+		DAD6A7D728C397B900736A32 /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationView.swift; sourceTree = "<group>"; };
+		DAD6A7D928C398C500736A32 /* LocationViewVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewVM.swift; sourceTree = "<group>"; };
+		DAD6A7DB28C39BC300736A32 /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,11 +119,14 @@
 			children = (
 				DAD6A79C28C2C0E800736A32 /* SimpleServiceModelApp.swift */,
 				DAD6A79E28C2C0E800736A32 /* ContentView.swift */,
+				DAD6A7DB28C39BC300736A32 /* WeatherView.swift */,
+				DAD6A7D728C397B900736A32 /* LocationView.swift */,
+				DAD6A7D928C398C500736A32 /* LocationViewVM.swift */,
 				DAD6A7D128C2CD1200736A32 /* Extensions */,
 				DAD6A7C828C2C10600736A32 /* Examples.swift */,
 				DAD6A7C928C2C10600736A32 /* MockLocationService.swift */,
 				DAD6A7C728C2C10600736A32 /* ServiceLayer.swift */,
-				DAD6A7D528C2D4CC00736A32 /* ViewModel.swift */,
+				DAD6A7D528C2D4CC00736A32 /* WeatherDisplayVM.swift */,
 				DAD6A7D328C2CE3F00736A32 /* MockWeatherServices.swift */,
 				DAD6A7A028C2C0EA00736A32 /* Assets.xcassets */,
 				DAD6A7A228C2C0EA00736A32 /* SimpleServiceModel.entitlements */,
@@ -291,10 +300,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAD6A7CC28C2C10600736A32 /* Examples.swift in Sources */,
-				DAD6A7D628C2D4CC00736A32 /* ViewModel.swift in Sources */,
+				DAD6A7D628C2D4CC00736A32 /* WeatherDisplayVM.swift in Sources */,
 				DAD6A7CD28C2C10600736A32 /* MockLocationService.swift in Sources */,
+				DAD6A7DC28C39BC300736A32 /* WeatherView.swift in Sources */,
 				DAD6A7D428C2CE3F00736A32 /* MockWeatherServices.swift in Sources */,
 				DAD6A7CB28C2C10600736A32 /* ServiceLayer.swift in Sources */,
+				DAD6A7DA28C398C500736A32 /* LocationViewVM.swift in Sources */,
+				DAD6A7D828C397B900736A32 /* LocationView.swift in Sources */,
 				DAD6A79F28C2C0E800736A32 /* ContentView.swift in Sources */,
 				DAD6A79D28C2C0E800736A32 /* SimpleServiceModelApp.swift in Sources */,
 				DAD6A7CE28C2C10600736A32 /* Array + Stream.swift in Sources */,

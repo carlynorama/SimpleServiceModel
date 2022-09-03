@@ -35,18 +35,18 @@ enum WeatherProfile {
 
 final class WeatherKitService: WeatherService {
     func getWeather(for location:CLLocation) async throws -> String {
-        "It's \(WeatherProfile.weatherDescription(for: location)) in \(location) says WeatherKitService"
+        "It's \(WeatherProfile.weatherDescription(for: location)) in \(location.pretty) says WeatherKitService"
     }
 }
 
 actor GoogleWeatherService: WeatherService {
     func getWeather(for location:CLLocation) async throws -> String {
-        "It's \(WeatherProfile.weatherDescription(for: location)) in \(location) says GoogleWeatherService"
+        "It's \(WeatherProfile.weatherDescription(for: location)) in \(location.pretty) says GoogleWeatherService"
     }
 }
 
 struct MockWeatherService: WeatherService {
     func getWeather(for location:CLLocation) async throws -> String {
-        "It's \(WeatherProfile.weatherDescription(for: location)) in \(location) says MockWeatherSerice"
+        "It's \(WeatherProfile.weatherDescription(for: location)) in \(location.pretty) says MockWeatherSerice"
     }
 }

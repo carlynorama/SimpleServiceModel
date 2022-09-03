@@ -16,33 +16,35 @@ protocol WeatherService {
     func getWeather(for location:CLLocation) async throws -> String
 }
 
-protocol LocationBroadcaster {
+// Multiprotocol conformnce gets wierd.
+//protocol LocationBroadcaster {
+//    var locationStream:AsyncStream<CLLocation> { get }
+//}
+
+protocol LocationService {
+    //LocationBroadcaster
     var locationStream:AsyncStream<CLLocation> { get }
 }
 
 protocol WeatherViewModelFactory {
     var weatherService: WeatherService { get }  //can't be let b/c protocol
-    var locationService: LocationBroadcaster { get }
+    var locationService: LocationService { get }
     
-    func makeViewModel() -> WeatherDisplayVM
-    //func makeMessageViewController() -> LocationService
-}
-
-protocol LocationUpdater {
-    
+    func makeWeatherDisplayVM() -> WeatherDisplayVM
 }
 
 protocol LocationViewModelFactory {
+    var locationService: LocationService { get }
     
+    func makeLocationVM() -> LocationViewModel
 }
 
 
 final class Services {
     var weatherService: WeatherService
-    //typealias BidirectionalLocationService = LocationBroadcaster & LocationUpdater
-    var locationService: LocationBroadcaster //& LocationUpdater//BidirectionalLocationService
+    var locationService: LocationService
     
-    init(weatherService: WeatherService, locationService: LocationBroadcaster) {
+    init(weatherService: WeatherService, locationService: LocationService) {
         self.weatherService = weatherService
         self.locationService = locationService
     }
@@ -50,11 +52,25 @@ final class Services {
 
 extension Services:WeatherViewModelFactory {
 
-    func makeViewModel() -> WeatherDisplayVM {
+    func makeWeatherDisplayVM() -> WeatherDisplayVM {
         WeatherDisplayVM(weatherService: weatherService, locationStream: locationService.locationStream)
     }
     
-    
+}
+
+extension Services:LocationViewModelFactory {
+    @MainActor func makeLocationVM() -> LocationViewModel {
+        return LocationViewModel(locationService: locationService)
+    }
+}
+
+extension Services {
+    static func forPreviews() -> Self {
+        Self(
+            weatherService: GoogleWeatherService(),
+            locationService: MockLocationService()
+        )
+    }
 }
 
 

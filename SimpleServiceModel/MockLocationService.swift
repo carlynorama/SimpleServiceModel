@@ -10,12 +10,12 @@ import CoreLocation
 
 
 
-struct MockLocationService {
+struct MockLocationService:LocationService {
     var locationStream: AsyncStream<CLLocation> {
         return AsyncStream { continuation in
             let items = Self.locationsToStream.timeSorted()
             for item in items {
-                print("got to the loop")
+                //print("got to the loop")
                 Timer.scheduledTimer(withTimeInterval: item.interval, repeats: false) { timer in
                     continuation.yield(item.location)
                     if item == items.last {
