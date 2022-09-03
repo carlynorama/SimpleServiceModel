@@ -15,7 +15,6 @@
 		DAD6A7B928C2C0EB00736A32 /* SimpleServiceModelUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD6A7B828C2C0EB00736A32 /* SimpleServiceModelUITests.swift */; };
 		DAD6A7BB28C2C0EB00736A32 /* SimpleServiceModelUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD6A7BA28C2C0EB00736A32 /* SimpleServiceModelUITestsLaunchTests.swift */; };
 		DAD6A7CB28C2C10600736A32 /* ServiceLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD6A7C728C2C10600736A32 /* ServiceLayer.swift */; };
-		DAD6A7CC28C2C10600736A32 /* Examples.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD6A7C828C2C10600736A32 /* Examples.swift */; };
 		DAD6A7CD28C2C10600736A32 /* MockLocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD6A7C928C2C10600736A32 /* MockLocationService.swift */; };
 		DAD6A7CE28C2C10600736A32 /* Array + Stream.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD6A7CA28C2C10600736A32 /* Array + Stream.swift */; };
 		DAD6A7D028C2CCF400736A32 /* CLLocation + Pretty.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD6A7CF28C2CCF300736A32 /* CLLocation + Pretty.swift */; };
@@ -56,7 +55,6 @@
 		DAD6A7B828C2C0EB00736A32 /* SimpleServiceModelUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleServiceModelUITests.swift; sourceTree = "<group>"; };
 		DAD6A7BA28C2C0EB00736A32 /* SimpleServiceModelUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleServiceModelUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		DAD6A7C728C2C10600736A32 /* ServiceLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceLayer.swift; sourceTree = "<group>"; };
-		DAD6A7C828C2C10600736A32 /* Examples.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Examples.swift; sourceTree = "<group>"; };
 		DAD6A7C928C2C10600736A32 /* MockLocationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockLocationService.swift; sourceTree = "<group>"; };
 		DAD6A7CA28C2C10600736A32 /* Array + Stream.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array + Stream.swift"; sourceTree = "<group>"; };
 		DAD6A7CF28C2CCF300736A32 /* CLLocation + Pretty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocation + Pretty.swift"; sourceTree = "<group>"; };
@@ -123,7 +121,6 @@
 				DAD6A7D728C397B900736A32 /* LocationView.swift */,
 				DAD6A7D928C398C500736A32 /* LocationViewVM.swift */,
 				DAD6A7D128C2CD1200736A32 /* Extensions */,
-				DAD6A7C828C2C10600736A32 /* Examples.swift */,
 				DAD6A7C928C2C10600736A32 /* MockLocationService.swift */,
 				DAD6A7C728C2C10600736A32 /* ServiceLayer.swift */,
 				DAD6A7D528C2D4CC00736A32 /* WeatherDisplayVM.swift */,
@@ -299,7 +296,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DAD6A7CC28C2C10600736A32 /* Examples.swift in Sources */,
 				DAD6A7D628C2D4CC00736A32 /* WeatherDisplayVM.swift in Sources */,
 				DAD6A7CD28C2C10600736A32 /* MockLocationService.swift in Sources */,
 				DAD6A7DC28C39BC300736A32 /* WeatherView.swift in Sources */,
