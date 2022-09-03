@@ -21,20 +21,29 @@ protocol WeatherService {
 //    var locationStream:AsyncStream<CLLocation> { get }
 //}
 
-protocol LocationService {
+protocol LocationBroadcaster {
     //LocationBroadcaster
     var locationStream:AsyncStream<CLLocation> { get }
+    var currentLocation:CLLocation { get }
+}
+
+protocol LocationUpdater {
+    mutating func update(with location:CLLocation)
+}
+
+protocol LocationService:LocationBroadcaster & LocationUpdater {
+    
 }
 
 protocol WeatherViewModelFactory {
     var weatherService: WeatherService { get }  //can't be let b/c protocol
-    var locationService: LocationService { get }
+    var locationBroadcaster: LocationBroadcaster { get }
     
     func makeWeatherDisplayVM() -> WeatherDisplayVM
 }
 
 protocol LocationViewModelFactory {
-    var locationService: LocationService { get }
+    //var locationService: LocationService { get }
     
     func makeLocationVM() -> LocationViewModel
 }
@@ -42,7 +51,11 @@ protocol LocationViewModelFactory {
 
 final class Services {
     var weatherService: WeatherService
-    var locationService: LocationService
+    var locationService:LocationService
+    
+    var locationBroadcaster: LocationBroadcaster {
+        locationService
+    }
     
     init(weatherService: WeatherService, locationService: LocationService) {
         self.weatherService = weatherService
@@ -53,7 +66,8 @@ final class Services {
 extension Services:WeatherViewModelFactory {
 
     func makeWeatherDisplayVM() -> WeatherDisplayVM {
-        WeatherDisplayVM(weatherService: weatherService, locationStream: locationService.locationStream)
+        //WeatherDisplayVM(weatherService: weatherService, locationStream: locationBroadcaster.locationStream)
+        WeatherDisplayVM(weatherService: weatherService, locationService: locationBroadcaster)
     }
     
 }

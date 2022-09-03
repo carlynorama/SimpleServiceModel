@@ -14,14 +14,24 @@ class WeatherDisplayVM:ObservableObject {
     //@Published var locationInfo:String = ""
     
     let weatherService:WeatherService
-    let locationStream:AsyncStream<CLLocation>
+    let locationService:LocationBroadcaster
+    //let locationStream:AsyncStream<CLLocation>
     
-    init(weatherService: WeatherService, locationStream: AsyncStream<CLLocation>) {
+    var lastLocation:CLLocation? = nil
+    
+    init(weatherService: WeatherService, locationService: LocationBroadcaster) {
         //self.weatherInfo = weatherInfo
         //self.locationInfo = locationInfo
         self.weatherService = weatherService
-        self.locationStream = locationStream
+        self.locationService = locationService
     }
+    
+//    init(weatherService: WeatherService, locationStream: AsyncStream<CLLocation>) {
+//        //self.weatherInfo = weatherInfo
+//        //self.locationInfo = locationInfo
+//        self.weatherService = weatherService
+//        self.locationStream = locationStream
+//    }
     
     @MainActor
     private func connectToStream(_ stream:AsyncStream<CLLocation>) async {
@@ -37,8 +47,25 @@ class WeatherDisplayVM:ObservableObject {
     }
     
     func listen() {
-        Task { @MainActor in 
-            await connectToStream(locationStream)
+//        Task { @MainActor in
+//            await connectToStream(locationStream)
+//        }
+        //TODO: Who kills this timer? 
+        Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
+            print("Checking")
+            if self.locationService.currentLocation != self.lastLocation {
+                print("Not the same")
+                self.lastLocation = self.locationService.currentLocation
+                Task { @MainActor in
+                    do {
+                        self.weatherInfo = "waiting..."
+                        self.weatherInfo = try await self.weatherService.getWeather(for: self.lastLocation!)
+                    } catch {
+                        self.weatherInfo = "No information at this time."
+                        print("Weather serive error")
+                    }
+                }
+            }
         }
     }
     

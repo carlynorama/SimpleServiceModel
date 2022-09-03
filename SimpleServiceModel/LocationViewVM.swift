@@ -16,15 +16,20 @@ class LocationViewModel:ObservableObject {
         self.locationService = locationService
     }
     
-    @Published var currentLocation = MockLocationService.locations[0]
+    @Published var currentLocation = CLLocation(
+        latitude: 35.0536909,
+        longitude: -118.242766)//MockLocationService.locations[0]
     
     @Published var pastLocations:[CLLocation] = []
+    
+    @Published var counter:Double = 0
     
     
     private func connectToStream(_ stream:AsyncStream<CLLocation>) async {
         for await update in stream {
             pastLocations.append(currentLocation)
             currentLocation = update
+            locationService.update(with: currentLocation)
             print("new location")
         }
     }

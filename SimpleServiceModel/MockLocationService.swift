@@ -11,12 +11,23 @@ import CoreLocation
 
 
 struct MockLocationService:LocationService {
+
+    
+//    func update() {
+//        //TODO: This should initialize the stream, not the location VM.
+//    }
+    
+    var currentLocation:CLLocation = CLLocation(
+        latitude: 38.0536909,
+        longitude: -118.242766)
+    
     var locationStream: AsyncStream<CLLocation> {
         return AsyncStream { continuation in
             let items = Self.locationsToStream.timeSorted()
             for item in items {
                 //print("got to the loop")
                 Timer.scheduledTimer(withTimeInterval: item.interval, repeats: false) { timer in
+                    //update(item.location)
                     continuation.yield(item.location)
                     if item == items.last {
                         continuation.finish()
@@ -25,6 +36,10 @@ struct MockLocationService:LocationService {
             }
             
         }
+    }
+    
+    mutating func update(with location:CLLocation) {
+        currentLocation = location
     }
 }
     
@@ -45,7 +60,7 @@ extension MockLocationService {
     
     //static let changeTimes = [TimeInterval](repeating: Double.random(in: 1...10), count: locations.count)
     
-    static let changeTimes:[TimeInterval] = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+    static let changeTimes:[TimeInterval] = [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110]
     
     public static let locations = [
         CLLocation(
