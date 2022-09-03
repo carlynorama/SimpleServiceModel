@@ -8,11 +8,7 @@
 import SwiftUI
 import CoreLocation
 
-extension CLLocation {
-    var pretty:String {
-        "lat:\(self.coordinate.latitude), long:\(self.coordinate.longitude)"
-    }
-}
+
 
 @MainActor
 class TempViewModel:ObservableObject {
@@ -21,7 +17,7 @@ class TempViewModel:ObservableObject {
     
     @Published var pastLocations:[CLLocation] = []
     
-    func startListener(_ stream:AsyncStream<CLLocation>) async {
+    private func connectToStream(_ stream:AsyncStream<CLLocation>) async {
         for await update in stream {
             pastLocations.append(currentLocation)
             currentLocation = update
@@ -29,8 +25,13 @@ class TempViewModel:ObservableObject {
         }
     }
     
+    private func disconnectStream() {
+        //learn how to do???
+        //locationService.killStreams?
+    }
+    
     func listen() async {
-        await startListener(locationService.locationStream)
+        await connectToStream(locationService.locationStream)
     }
 }
 
