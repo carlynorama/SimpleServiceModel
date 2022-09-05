@@ -121,16 +121,11 @@
 			children = (
 				DAD6A79C28C2C0E800736A32 /* SimpleServiceModelApp.swift */,
 				DAD6A79E28C2C0E800736A32 /* ContentView.swift */,
-				DAD6A7DD28C4EF6100736A32 /* GraphicDisplayView.swift */,
-				DAD6A7DB28C39BC300736A32 /* WeatherView.swift */,
-				DAD6A7D728C397B900736A32 /* LocationView.swift */,
-				DAD6A7D928C398C500736A32 /* LocationViewVM.swift */,
+				DAD6A7E328C6936A00736A32 /* Views */,
+				DAD6A7E228C6931F00736A32 /* ViewModels */,
 				DAD6A7D128C2CD1200736A32 /* Extensions */,
-				DAD6A7C928C2C10600736A32 /* MockLocationService.swift */,
+				DAD6A7E128C692F600736A32 /* Services */,
 				DAD6A7C728C2C10600736A32 /* ServiceLayer.swift */,
-				DAD6A7D528C2D4CC00736A32 /* WeatherDisplayVM.swift */,
-				DAD6A7DF28C4F2DD00736A32 /* DisplayGenerator.swift */,
-				DAD6A7D328C2CE3F00736A32 /* MockWeatherServices.swift */,
 				DAD6A7A028C2C0EA00736A32 /* Assets.xcassets */,
 				DAD6A7A228C2C0EA00736A32 /* SimpleServiceModel.entitlements */,
 				DAD6A7A328C2C0EA00736A32 /* Preview Content */,
@@ -170,6 +165,35 @@
 				DAD6A7CA28C2C10600736A32 /* Array + Stream.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		DAD6A7E128C692F600736A32 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				DAD6A7C928C2C10600736A32 /* MockLocationService.swift */,
+				DAD6A7DF28C4F2DD00736A32 /* DisplayGenerator.swift */,
+				DAD6A7D328C2CE3F00736A32 /* MockWeatherServices.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		DAD6A7E228C6931F00736A32 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				DAD6A7D928C398C500736A32 /* LocationViewVM.swift */,
+				DAD6A7D528C2D4CC00736A32 /* WeatherDisplayVM.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		DAD6A7E328C6936A00736A32 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DAD6A7DD28C4EF6100736A32 /* GraphicDisplayView.swift */,
+				DAD6A7DB28C39BC300736A32 /* WeatherView.swift */,
+				DAD6A7D728C397B900736A32 /* LocationView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
