@@ -7,12 +7,16 @@
 
 import SwiftUI
 
+
+var services:Services = Services(
+    weatherService: WeatherKitService(),
+    locationService: MockLocationService(),
+    graphicsDriver: DisplayGenerator()
+)
+
 @main
 struct SimpleServiceModelApp: App {
-    var services:Services = Services(
-        weatherService: WeatherKitService(),
-        locationService: MockLocationService()
-    )
+
     
     var body: some Scene {
         WindowGroup {

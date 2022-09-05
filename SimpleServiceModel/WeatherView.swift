@@ -20,6 +20,6 @@ struct WeatherView: View {
 
 struct WeatherView_Previews: PreviewProvider {
     static var previews: some View {
-        WeatherView().environmentObject(Services.forPreviews().makeWeatherDisplayVM())
+        WeatherView().environmentObject(Services.forPreviews.makeWeatherDisplayVM())
     }
 }

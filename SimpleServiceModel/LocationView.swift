@@ -15,8 +15,8 @@ struct LocationView: View {
     @EnvironmentObject var viewModel:LocationViewModel
     
     var body: some View {
-        VStack {
-            Text("Hello, \(viewModel.currentLocation.pretty)")
+        VStack(alignment: .leading) {
+            Text("Hello (\(viewModel.currentLocation.pretty))").font(.title2).padding()
             List(viewModel.pastLocations, id:\.self) {
                 Text($0.pretty)
             }

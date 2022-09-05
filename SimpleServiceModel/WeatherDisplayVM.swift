@@ -10,20 +10,24 @@ import CoreLocation
 
 
 class WeatherDisplayVM:ObservableObject {
-    @Published var weatherInfo:String = ""
-    //@Published var locationInfo:String = ""
+
     
-    let weatherService:WeatherService
-    let locationService:LocationBroadcaster
+    let weatherService: WeatherService
+    let locationService: LocationBroadcaster
+    let displayGenerator: GraphicsDriver
+    
     //let locationStream:AsyncStream<CLLocation>
+    
+    @Published var weatherInfo:String = ""
     
     var lastLocation:CLLocation? = nil
     
-    init(weatherService: WeatherService, locationService: LocationBroadcaster) {
+    init(weatherService: WeatherService, locationService: LocationBroadcaster, displayGenerator:GraphicsDriver) {
         //self.weatherInfo = weatherInfo
         //self.locationInfo = locationInfo
         self.weatherService = weatherService
         self.locationService = locationService
+        self.displayGenerator = displayGenerator
     }
     
 //    init(weatherService: WeatherService, locationStream: AsyncStream<CLLocation>) {
@@ -50,12 +54,14 @@ class WeatherDisplayVM:ObservableObject {
 //        Task { @MainActor in
 //            await connectToStream(locationStream)
 //        }
-        //TODO: Who kills this timer? 
-        Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
-            print("Checking")
+        //TODO: Who kills this timer?
+        //TODO: What happens if the location changes faster than the weather service provides info?
+        Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true) { _ in
+            //print("Checking")
             if self.locationService.currentLocation != self.lastLocation {
-                print("Not the same")
+                //print("Not the same")
                 self.lastLocation = self.locationService.currentLocation
+                self.updateDisplayPoint(self.lastLocation!)
                 Task { @MainActor in
                     do {
                         self.weatherInfo = "waiting..."
@@ -69,5 +75,11 @@ class WeatherDisplayVM:ObservableObject {
         }
     }
     
+    func updateDisplayPoint(_ location:CLLocation) {
+        let yFactor = (location.coordinate.latitude + 90.0)/180.0
+        let xFactor = (location.coordinate.latitude + 180.0)/360
+        print("updating display")
+        displayGenerator.updateFactors(xFactor, yFactor)
+    }
     
 }

@@ -20,8 +20,11 @@ struct ContentView: View {
     
     var body: some View {
         HStack {
-            LocationView().environmentObject(location)
-            WeatherView().environmentObject(weather)
+            GraphicDisplayView(displayGenerator: services.graphicsDriver)
+            VStack {
+                LocationView().environmentObject(location)
+                WeatherView().environmentObject(weather)
+            }
         }
     }
 }
@@ -29,5 +32,7 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .environmentObject(Services.forPreviews.makeLocationVM())
+            .environmentObject(Services.forPreviews.makeWeatherDisplayVM())
     }
 }
