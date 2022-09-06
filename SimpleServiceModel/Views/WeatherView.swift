@@ -12,7 +12,7 @@ struct WeatherView: View {
     
     var body: some View {
         ZStack {
-            Rectangle().foregroundColor(.blue)
+            Rectangle().foregroundColor(services.graphicsDriver.backgroundColor)
             Text(weatherViewModel.weatherInfo)
         }.onAppear(perform: weatherViewModel.listen)
     }

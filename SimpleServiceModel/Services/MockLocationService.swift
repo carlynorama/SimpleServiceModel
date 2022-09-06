@@ -63,18 +63,23 @@ extension MockLocationService {
     static let changeTimes:[TimeInterval] = [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110]
     
     public static let locations = [
+        //Los Angeles
         CLLocation(
             latitude: 34.0536909,
             longitude: -118.242766),
+        //Miami
         CLLocation(
             latitude: 25.7959,
             longitude: -80.2871),
+        //Chicago
         CLLocation(
             latitude: 41.8755616,
             longitude: -87.6244212),
+        //Wellington
         CLLocation(
             latitude: -41.286461,
             longitude: 174.776230),
+        //Rio Gallegos
         CLLocation(
             latitude: -51.630920,
             longitude: -69.224777),

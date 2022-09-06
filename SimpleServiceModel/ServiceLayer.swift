@@ -9,6 +9,7 @@
 
 import Foundation
 import CoreLocation
+import SwiftUI
 
 
 
@@ -35,6 +36,7 @@ protocol GraphicsDriver {
     //Used by the view to display
     var epicenter:CGPoint { get }
     func updateSize(to size:CGSize)
+    var backgroundColor:Color { get }
     
     //Used by others to influence display
     func updateFactors(_ x:Double,_ y:Double)

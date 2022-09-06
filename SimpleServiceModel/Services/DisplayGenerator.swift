@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 final class DisplayGenerator:GraphicsDriver {
     static let shared = DisplayGenerator()
@@ -15,6 +16,9 @@ final class DisplayGenerator:GraphicsDriver {
     private(set) var xFactor:Double
     private(set) var yFactor:Double
     
+    //hsl(248, 42%, 46%), hsv(248, 59%, 65%), rgb(80, 68, 165)
+    let backgroundColor = Color(hue: 248/360, saturation: 0.59, brightness: 0.65)
+    //let backgroundColor = Color(red: 80/255, green: 68/255, blue: 165/255)
     
     init() {
         self.size = CGSize(width: 100, height: 100)

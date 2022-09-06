@@ -76,8 +76,9 @@ class WeatherDisplayVM:ObservableObject {
     }
     
     func updateDisplayPoint(_ location:CLLocation) {
-        let yFactor = (location.coordinate.latitude + 90.0)/180.0
-        let xFactor = (location.coordinate.latitude + 180.0)/360
+        
+        let xFactor = (location.coordinate.longitude + 180.0)/360.0
+        let yFactor = ((location.coordinate.latitude * -1) + 90.0)/180.0
         print("updating display")
         displayGenerator.updateFactors(xFactor, yFactor)
     }
