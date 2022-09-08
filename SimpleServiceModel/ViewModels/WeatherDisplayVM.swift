@@ -55,6 +55,7 @@ class WeatherDisplayVM:ObservableObject {
 //            await connectToStream(locationStream)
 //        }
         //TODO: Who kills this timer?
+        //https://www.hackingwithswift.com/books/ios-swiftui/triggering-events-repeatedly-using-a-timer
         //TODO: What happens if the location changes faster than the weather service provides info?
         Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true) { _ in
             //print("Checking")

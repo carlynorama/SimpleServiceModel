@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA4D474828CA4AE10005D326 /* AsyncPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4D474728CA4AE10005D326 /* AsyncPublisher.swift */; };
 		DAD6A79D28C2C0E800736A32 /* SimpleServiceModelApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD6A79C28C2C0E800736A32 /* SimpleServiceModelApp.swift */; };
 		DAD6A79F28C2C0E800736A32 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD6A79E28C2C0E800736A32 /* ContentView.swift */; };
 		DAD6A7A128C2C0EA00736A32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAD6A7A028C2C0EA00736A32 /* Assets.xcassets */; };
@@ -25,6 +26,7 @@
 		DAD6A7DC28C39BC300736A32 /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD6A7DB28C39BC300736A32 /* WeatherView.swift */; };
 		DAD6A7DE28C4EF6100736A32 /* GraphicDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD6A7DD28C4EF6100736A32 /* GraphicDisplayView.swift */; };
 		DAD6A7E028C4F2DD00736A32 /* DisplayGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD6A7DF28C4F2DD00736A32 /* DisplayGenerator.swift */; };
+		DAD6A7E928C7C72800736A32 /* ViewModelAsFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD6A7E828C7C72800736A32 /* ViewModelAsFunction.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DA4D474728CA4AE10005D326 /* AsyncPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncPublisher.swift; sourceTree = "<group>"; };
 		DAD6A79928C2C0E800736A32 /* SimpleServiceModel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleServiceModel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAD6A79C28C2C0E800736A32 /* SimpleServiceModelApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleServiceModelApp.swift; sourceTree = "<group>"; };
 		DAD6A79E28C2C0E800736A32 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -68,6 +71,7 @@
 		DAD6A7DB28C39BC300736A32 /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
 		DAD6A7DD28C4EF6100736A32 /* GraphicDisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphicDisplayView.swift; sourceTree = "<group>"; };
 		DAD6A7DF28C4F2DD00736A32 /* DisplayGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayGenerator.swift; sourceTree = "<group>"; };
+		DAD6A7E828C7C72800736A32 /* ViewModelAsFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelAsFunction.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +99,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DA4D474B28CA5C6C0005D326 /* MiscAlternatives */ = {
+			isa = PBXGroup;
+			children = (
+				DAD6A7E828C7C72800736A32 /* ViewModelAsFunction.swift */,
+				DA4D474728CA4AE10005D326 /* AsyncPublisher.swift */,
+			);
+			path = MiscAlternatives;
+			sourceTree = "<group>";
+		};
 		DAD6A79028C2C0E800736A32 = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +137,7 @@
 				DAD6A7E328C6936A00736A32 /* Views */,
 				DAD6A7E228C6931F00736A32 /* ViewModels */,
 				DAD6A7D128C2CD1200736A32 /* Extensions */,
+				DA4D474B28CA5C6C0005D326 /* MiscAlternatives */,
 				DAD6A7E128C692F600736A32 /* Services */,
 				DAD6A7C728C2C10600736A32 /* ServiceLayer.swift */,
 				DAD6A7A028C2C0EA00736A32 /* Assets.xcassets */,
@@ -328,11 +342,13 @@
 			files = (
 				DAD6A7D628C2D4CC00736A32 /* WeatherDisplayVM.swift in Sources */,
 				DAD6A7CD28C2C10600736A32 /* MockLocationService.swift in Sources */,
+				DAD6A7E928C7C72800736A32 /* ViewModelAsFunction.swift in Sources */,
 				DAD6A7DE28C4EF6100736A32 /* GraphicDisplayView.swift in Sources */,
 				DAD6A7E028C4F2DD00736A32 /* DisplayGenerator.swift in Sources */,
 				DAD6A7DC28C39BC300736A32 /* WeatherView.swift in Sources */,
 				DAD6A7D428C2CE3F00736A32 /* MockWeatherServices.swift in Sources */,
 				DAD6A7CB28C2C10600736A32 /* ServiceLayer.swift in Sources */,
+				DA4D474828CA4AE10005D326 /* AsyncPublisher.swift in Sources */,
 				DAD6A7DA28C398C500736A32 /* LocationViewVM.swift in Sources */,
 				DAD6A7D828C397B900736A32 /* LocationView.swift in Sources */,
 				DAD6A79F28C2C0E800736A32 /* ContentView.swift in Sources */,
