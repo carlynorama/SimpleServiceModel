@@ -2,14 +2,25 @@
 //  FlavorManager.swift
 //  SimpleServiceModel
 //
-//  Created by Labtanza on 9/8/22.
+//  Created by carlynorama on 9/8/22.
 //
-//  https://www.youtube.com/watch?v=ePPm2ftSVqw
+// https://developer.apple.com/documentation/combine/asyncpublisher
+// https://www.donnywals.com/comparing-use-cases-for-async-sequences-and-publishers/
+// memory issues discussed: https://www.donnywals.com/comparing-lifecycle-management-for-async-sequences-and-publishers/
+// https://www.youtube.com/watch?v=ePPm2ftSVqw (How to use AsyncPublisher to convert @Published to Async / Await)
+// https://www.hackingwithswift.com/articles/179/capture-lists-in-swift-whats-the-difference-between-weak-strong-and-unowned-references
+// https://www.mikeash.com/pyblog/friday-qa-2017-09-22-swift-4-weak-references.html
+// https://forums.swift.org/t/explicit-self-not-required-for-task-closures/54364/7
+
+//A quick note on this approach. If you want the viewModel to do a task for the life of the view and then stop, put the Task call IN THE VIEW.
+
+//To catch this typer of thing in XCode 14 (beta build 3+)
+//Setting Build Setting > Strict Concurrency Checking
 
 import SwiftUI
 
 struct FlavorsView: View {
-    
+    //there is a task creator IN THE INIT of this VM. The tasks will last with the VM or longer. Watch for leaks.
     @StateObject private var viewModel = FlavorVM()
     
     var body: some View {
@@ -22,8 +33,15 @@ struct FlavorsView: View {
                     }
                 }
             }
-        }.task {
+        }
+        //Each must be its own seperate task to run concurently.
+        .task {
             await viewModel.start()
+        }
+        
+        .task {
+            //should be cleaned up and not leak.
+            await viewModel.listenForFlavorOfTheWeek()
         }
     }
     
@@ -57,7 +75,6 @@ import Foundation
 
 actor FlavorManager {
     @Published var myFlavors:[Flavor] = []
-    
     @Published var currentFlavor:Flavor = Flavor(name: "Apple Pie", description: "Seasonal Yummy")
 
     func addData() async {
@@ -76,25 +93,48 @@ class FlavorVM:ObservableObject {
     let manager = FlavorManager()
     
     init() {
+        //spinning up tasks in the init of a ViewModel instead of the
+        //view means they will likely persist for longer than the view.
+        //They will potentially persist for the life of the manager?
         listen()
     }
     
+
+    //Who owns tasks called here? Who kills them?
     private func listen() {
-        Task {
-            for await value in await manager.$myFlavors.values {
-                await MainActor.run {
-                    self.flavorsToDisplay = value
-                }
-            }
-            //This loop never exits. no code here will execute.
-        }
+        //One cannot put one loop after another. Each loop needs
+        //it's own task.
         
-        Task {
-            for await value in await manager.$currentFlavor.values {
-                await MainActor.run {
-                    self.thisWeeksSpecial = "\(value.name): \(value.description)"
-                }
+        //adding [weak self] in and self? helps avoid leaks?
+        
+        Task { [weak self] in
+            await self?.listenForFlavorList()
+            //No code here will execute because this function never
+            //finishes.
+            
+        }
+        //Other things need to be in their own task.
+    }
+    
+    public func listenForFlavorOfTheWeek() async {
+        for await value in await manager.$currentFlavor.values {
+            await MainActor.run {
+                self.thisWeeksSpecial = "\(value.name): \(value.description)"
             }
+            
+            //TODO: Test code w/ and w/o this line. Inside and outside of [weak self] task.
+            //if Task.isCancelled { break }
+        }
+    }
+    
+    public func listenForFlavorList() async {
+        for await value in await manager.$myFlavors.values {
+            await MainActor.run {
+                self.flavorsToDisplay = value
+            }
+            
+            //TODO: Test code w/ and w/o this line. Inside and outside of [weak self] task.
+            //if Task.isCancelled { break }
         }
     }
     
