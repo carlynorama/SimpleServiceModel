@@ -19,14 +19,13 @@ struct ContentView: View {
     
     
     var body: some View {
-        FlavorsView()
-//        HStack {
-//            GraphicDisplayView(displayGenerator: services.graphicsDriver)
-//            VStack {
-//                LocationView().environmentObject(location)
-//                WeatherView().environmentObject(weather)
-//            }
-//        }
+        HStack {
+            GraphicDisplayView(displayGenerator: services.graphicsDriver)
+            VStack {
+                LocationView().environmentObject(location)
+                WeatherView().environmentObject(weather)
+            }
+        }
     }
 }
 
