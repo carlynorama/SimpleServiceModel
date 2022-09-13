@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-
+//TODO: Where is the most performant place to put this? 
 var services:Services = Services(
     weatherService: WeatherKitService(),
     locationService: MockLocationService(),
@@ -16,8 +16,6 @@ var services:Services = Services(
 
 @main
 struct SimpleServiceModelApp: App {
-
-    
     var body: some Scene {
         WindowGroup {
             ContentView()

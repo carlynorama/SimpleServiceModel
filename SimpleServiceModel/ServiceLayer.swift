@@ -55,10 +55,6 @@ protocol LocationViewModelFactory {
 }
 
 
-
-
-
-
 struct Services {
     var weatherService: WeatherService
     var locationService: LocationService
