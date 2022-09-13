@@ -37,18 +37,19 @@ class WeatherDisplayVM:ObservableObject {
 //        self.locationStream = locationStream
 //    }
     
-    @MainActor
-    private func connectToStream(_ stream:AsyncStream<CLLocation>) async {
-        for await update in stream {
-            do {
-                weatherInfo = "waiting..."
-                weatherInfo = try await weatherService.getWeather(for: update)
-            } catch {
-                weatherInfo = "No information at this time."
-                print("Weather serive error")
-            }
-        }
-    }
+//    //TODO: does this WHOLE task need to be on the main actor?
+//    @MainActor
+//    private func connectToStream(_ stream:AsyncStream<CLLocation>) async {
+//        for await update in stream {
+//            do {
+//                weatherInfo = "waiting..."
+//                weatherInfo = try await weatherService.getWeather(for: update)
+//            } catch {
+//                weatherInfo = "No information at this time."
+//                print("Weather serive error")
+//            }
+//        }
+//    }
     
     func listen() {
 //        Task { @MainActor in
